@@ -17,6 +17,7 @@ description: Produces scientifically grounded answers by finding, evaluating, an
   - Webfetch
   - brave_search
   - consensus
+  - paper-search
 
 ## Format
 

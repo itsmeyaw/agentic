@@ -7,3 +7,4 @@ Provide a scientific-backed answers for agent.
 - MCP:
   - [brave_search](https://brave.com/search/api/guides/use-with-claude-desktop-with-mcp/)
   - [consensus](https://docs.consensus.app/docs/mcp)
+  - [paper-search-mcp](https://github.com/openags/paper-search-mcp)
