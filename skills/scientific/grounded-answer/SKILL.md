@@ -20,7 +20,7 @@ description: Produces scientifically grounded answers by finding, evaluating, an
   - consensus
   - paper-search
 - Save downloaded file to a temporary directory (e.g., /tmp)
-- When reading a pdf file, try first with `docling`. Command: `docling --to md --output <output_file_path> <input_file_path>`. It will generate a markdown file in the `<output_file_path>`.
+- When reading a PDF file, first use `scripts/pdf-to-markdown.py` with flags `--input <input_file_path> --output <output_file_path>`. It will write Markdown to `<output_file_path>` and may take a long time, so run it as a background task.
 
 ## Format
 
