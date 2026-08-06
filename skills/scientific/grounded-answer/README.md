@@ -2,6 +2,10 @@
 
 Provide a scientific-backed answers for agent.
 
+## Setup
+
+Before using the skill, it is recommended to install the dependencies used by PDF conversion script inside [requirements.txt](requirements.txt)
+
 ## Requirement
 
 - MCP (each of them are optional, but each can improve the result):
