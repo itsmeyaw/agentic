@@ -25,7 +25,7 @@ description: Produces scientifically grounded answers by finding, evaluating, an
 ## Format
 
 - Answer in prose, unless asked otherwise.
-- User numbered citation.
+- Use numbered citation.
 - In bibliography, attach only title, first author, DOI, and verbatim quote.
 
 <example>
