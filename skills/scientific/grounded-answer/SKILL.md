@@ -10,6 +10,7 @@ description: Produces scientifically grounded answers by finding, evaluating, an
 - Prioritize recent scientific works.
 - Prioritize high ranking journals, such as IEEE, ACM library. Arxiv is also a viable option.
 - The scientific work must contain information of the statement, do not infer information based on the work title.
+- Always read original file if you are unsure in the slightest.
 
 ## Tips
 
