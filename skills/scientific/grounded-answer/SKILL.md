@@ -18,6 +18,8 @@ description: Produces scientifically grounded answers by finding, evaluating, an
   - brave_search
   - consensus
   - paper-search
+- Save downloaded file to a temporary directory (e.g., /tmp)
+- When reading a pdf file, try first with `docling`. Command: `docling --to md --output <output_file_path> <input_file_path>`. It will generate a markdown file in the `<output_file_path>`.
 
 ## Format
 
