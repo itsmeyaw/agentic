@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import os
+import shlex
 import sys
 import tempfile
 from collections.abc import Sequence
@@ -18,6 +19,11 @@ class ConversionError(Exception):
 
 def status(message: str) -> None:
     print(message, file=sys.stderr)
+
+
+def install_command(package: str) -> str:
+    """Return a pip command bound to the running Python interpreter."""
+    return f"{shlex.quote(sys.executable)} -m pip install {shlex.quote(package)}"
 
 
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
@@ -146,7 +152,10 @@ def convert_with_pypdf(input_path: Path) -> str:
     try:
         from pypdf import PdfReader
     except ImportError as error:
-        raise ConversionError("pypdf is not installed for fallback.") from error
+        raise ConversionError(
+            "pypdf is unavailable to the Python interpreter running this script: "
+            f"{sys.executable}\nInstall it with: {install_command('pypdf')}"
+        ) from error
 
     try:
         reader = PdfReader(str(input_path))
@@ -190,7 +199,11 @@ def convert_with_pypdf(input_path: Path) -> str:
 def convert(input_path: Path) -> tuple[str, str]:
     """Prefer GPU VLM, then Docling, then pypdf as a fallback."""
     if importlib.util.find_spec("docling") is None:
-        status("Docling is unavailable; using pypdf fallback.")
+        status(
+            "Docling is unavailable to the Python interpreter running this script: "
+            f"{sys.executable}\nUsing pypdf fallback. Install Docling with: "
+            f"{install_command('docling[vlm]')}"
+        )
         return convert_with_pypdf(input_path), "pypdf"
 
     selected_device = select_accelerator()

@@ -4,7 +4,20 @@ Provide a scientific-backed answers for agent.
 
 ## Setup
 
-Before using the skill, it is recommended to install the dependencies used by PDF conversion script inside [requirements.txt](requirements.txt)
+Install and run the PDF conversion script with the same Python interpreter. Avoid
+using `pip` on its own because it can target a different Python installation.
+
+```sh
+python3 -m pip install -r requirements.txt
+python3 scripts/pdf-to-markdown.py --input paper.pdf --output paper.md
+```
+
+If you use `python` rather than `python3`, replace both commands consistently:
+
+```sh
+python -m pip install -r requirements.txt
+python scripts/pdf-to-markdown.py --input paper.pdf --output paper.md
+```
 
 ## Requirement
 

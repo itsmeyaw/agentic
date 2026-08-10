@@ -1,7 +1,7 @@
---- 
+---
 name: minimal-rewrite
 description: Perform rewrite of the selected text without altering the overall structure of the creative work.
---- 
+---
 
 ## Task
 
