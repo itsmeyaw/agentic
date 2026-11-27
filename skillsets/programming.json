@@ -27,11 +27,6 @@
       "commit": "6f7f7831a625f040a8e06a0e7954826b87ce775a"
     },
     {
-      "name": "create-readme",
-      "source": "github/awesome-copilot",
-      "commit": "93fc8b9ee3ef56b9b5e7261e6ce92d314cb2c1cf"
-    },
-    {
       "name": "diagnosing-bugs",
       "source": "mattpocock/skills",
       "commit": "6f7f7831a625f040a8e06a0e7954826b87ce775a"
